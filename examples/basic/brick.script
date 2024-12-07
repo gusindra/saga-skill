@@ -1,0 +1,17 @@
+go.property("color", hash("yellow"))
+go.property("type", hash("plain"))
+
+local emthree = require "emthree.emthree"
+local normal_scale = 0.5		-- The normal render size
+local zoomed_scale = 0.8		-- When interacted with, zoom to this
+
+function init(self)
+	msg.post("#sprite", "play_animation", { id = self.color })
+	go.set_scale(normal_scale)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == emthree.REMOVE then
+		go.delete()
+	end
+end

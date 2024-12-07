@@ -1,0 +1,11 @@
+function init(self)
+	-- Add initialization code here
+	self.final_score_node = gui.get_node("finalScore") 
+end
+
+function on_message(self, message_id, message, sender)
+	local amount = message.amount
+	if message_id == hash("game_over") then
+		gui.set_text(self.final_score_node, string.format("%d", amount))
+	end
+end

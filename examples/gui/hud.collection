@@ -1,0 +1,16 @@
+name: "hud"
+scale_along_z: 0
+embedded_instances {
+  id: "go"
+  data: "components {\n"
+  "  id: \"hud\"\n"
+  "  component: \"/examples/gui/hud.gui\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"mainmenu\"\n"
+  "  type: \"collectionproxy\"\n"
+  "  data: \"collection: \\\"/examples/examples.collection\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+}

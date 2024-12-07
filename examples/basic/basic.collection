@@ -1,0 +1,50 @@
+name: "basic"
+scale_along_z: 0
+embedded_instances {
+  id: "go"
+  data: "components {\n"
+  "  id: \"basic\"\n"
+  "  component: \"/examples/basic/basic.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"factory\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/examples/basic/brick.go\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"debugfactory\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/examples/debug/debug.go\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    x: 10.0
+    y: 10.0
+  }
+}
+embedded_instances {
+  id: "label"
+  data: "embedded_components {\n"
+  "  id: \"label\"\n"
+  "  type: \"label\"\n"
+  "  data: \"size {\\n"
+  "  x: 256.0\\n"
+  "  y: 62.0\\n"
+  "}\\n"
+  "text: \\\"Basic\\\"\\n"
+  "font: \\\"/builtins/fonts/default.font\\\"\\n"
+  "material: \\\"/builtins/fonts/label-df.material\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    x: 600.0
+    y: 550.0
+  }
+}
+embedded_instances {
+  id: "enemy"
+  data: ""
+}

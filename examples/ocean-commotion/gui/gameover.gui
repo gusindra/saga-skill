@@ -1,0 +1,142 @@
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+nodes {
+  position {
+    x: 600.0
+    y: 300.0
+  }
+  size {
+    x: 200.0
+    y: 50.0
+  }
+  color {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  type: TYPE_BOX
+  id: "playButton"
+  inherit_alpha: true
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Play Again"
+  font: "default"
+  id: "playAgain"
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  parent: "playButton"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 600.0
+    y: 199.0
+  }
+  size {
+    x: 200.0
+    y: 50.0
+  }
+  color {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  type: TYPE_BOX
+  id: "backMenu"
+  inherit_alpha: true
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Main Menu"
+  font: "default"
+  id: "mainMenu"
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  parent: "backMenu"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 605.0
+    y: 469.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Game Over"
+  font: "default"
+  id: "GameOver"
+  inherit_alpha: true
+  text_leading: 2.0
+}
+nodes {
+  position {
+    x: 643.0
+    y: 423.0
+  }
+  scale {
+    x: 1.4
+    y: 1.4
+  }
+  size {
+    x: 225.0
+    y: 35.0
+  }
+  type: TYPE_TEXT
+  text: "0"
+  font: "default"
+  id: "finalScore"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  position {
+    x: 548.0
+    y: 425.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Final Score"
+  font: "default"
+  id: "labelFinalScore"
+  inherit_alpha: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

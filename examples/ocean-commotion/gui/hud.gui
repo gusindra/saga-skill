@@ -1,0 +1,70 @@
+script: "/examples/ocean-commotion/gui/hud.gui_script"
+fonts {
+  name: "hud"
+  font: "/builtins/fonts/default.font"
+}
+nodes {
+  position {
+    x: 600.0
+    y: 30.0
+  }
+  scale {
+    x: 1.4
+    y: 1.4
+  }
+  size {
+    x: 225.0
+    y: 35.0
+  }
+  type: TYPE_TEXT
+  text: "0"
+  font: "hud"
+  id: "oceanScore"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  position {
+    x: 200.0
+    y: 30.0
+  }
+  scale {
+    x: 1.4
+    y: 1.4
+  }
+  size {
+    x: 225.0
+    y: 35.0
+  }
+  type: TYPE_TEXT
+  text: "1000"
+  font: "hud"
+  id: "lifePoint"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  position {
+    x: 950.0
+    y: 30.0
+  }
+  scale {
+    x: 1.4
+    y: 1.4
+  }
+  size {
+    x: 225.0
+    y: 35.0
+  }
+  type: TYPE_TEXT
+  text: "100"
+  font: "hud"
+  id: "enemyLife"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

@@ -1,0 +1,79 @@
+name: "oceancommotion"
+instances {
+  id: "enemyFish"
+  prototype: "/examples/ocean-commotion/assets/enemyFish.go"
+  position {
+    x: 945.0
+    y: 268.0
+  }
+  scale3 {
+    x: 2.0
+    y: 2.0
+    z: 2.0
+  }
+}
+scale_along_z: 0
+embedded_instances {
+  id: "board"
+  data: "components {\n"
+  "  id: \"script\"\n"
+  "  component: \"/examples/ocean-commotion/board.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"fish_factory\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/examples/ocean-commotion/fish.go\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    x: 20.0
+    y: 40.0
+  }
+}
+embedded_instances {
+  id: "logo"
+  data: "embedded_components {\n"
+  "  id: \"label\"\n"
+  "  type: \"label\"\n"
+  "  data: \"size {\\n"
+  "  x: 128.0\\n"
+  "  y: 32.0\\n"
+  "}\\n"
+  "text: \\\"Ocean Commotion\\\"\\n"
+  "font: \\\"/examples/ocean-commotion/assets/font/text.font\\\"\\n"
+  "material: \\\"/builtins/fonts/label.material\\\"\\n"
+  "\"\n"
+  "  scale {\n"
+  "    x: 0.2\n"
+  "    y: 0.2\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 600.0
+    y: 580.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "enemy"
+  children: "enemyFish"
+  data: ""
+}
+embedded_instances {
+  id: "scoreO"
+  data: "components {\n"
+  "  id: \"hud\"\n"
+  "  component: \"/examples/ocean-commotion/gui/hud.gui\"\n"
+  "}\n"
+  "components {\n"
+  "  id: \"attack\"\n"
+  "  component: \"/examples/ocean-commotion/assets/attack.sound\"\n"
+  "}\n"
+  "components {\n"
+  "  id: \"hitEnemy\"\n"
+  "  component: \"/examples/ocean-commotion/assets/hitEnemy.sound\"\n"
+  "}\n"
+  ""
+}
